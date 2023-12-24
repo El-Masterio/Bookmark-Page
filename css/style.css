@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(#30336b, #eb4d4b, #f0932b, #4834d4);
+  min-height: 100vh;
+  color: white;
+}
+.main-title h2 {
+  position: absolute;
+
+  /* transform: translate(-50%, -50%); */
+  font-size: 50px;
+}
+.main-title h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #badc58;
+}
+.main-title h2:nth-child(2) {
+  color: #6ab04c;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  50% {
+    clip-path: polygon(
+      0% 47%,
+      16% 46%,
+      28% 54%,
+      38% 59%,
+      49% 65%,
+      67% 66%,
+      80% 63%,
+      88% 58%,
+      100% 48%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50%,
+  100% {
+    clip-path: polygon(
+      100% 45%,
+      86% 46%,
+      78% 53%,
+      66% 62%,
+      53% 70%,
+      31% 71%,
+      18% 67%,
+      8% 60%,
+      0% 50%,
+      0% 100%,
+      99% 100%
+    );
+  }
+}
+.body-title {
+  overflow-y: hidden;
+  color: #44bd32;
+}
+.body-title:hover .title-layer {
+  top: 15px;
+}
+.title-layer {
+  /* height: 50px; */
+  height: 50px;
+  top: 40px;
+  z-index: -5;
+  width: 100%;
+
+  transition: all 0.4s;
+  background-image: linear-gradient(#30336b, #eb4d4b);
+}
